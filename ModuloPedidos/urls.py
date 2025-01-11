@@ -17,12 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ClasesPedido import views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('user/', views.user, name="user"),
     path('blank/',views.blank, name="blank"),
     path('login/',views.login, name="login"),
-    path('login/', views.login_view, name='login'),
-    path('user/', views.user_panel, name='user_panel'),  # Define la vista 'user_panel'.
+    path('register/', views.register_view, name='register'),
+    path('user/', views.user_panel, name='user_panel'),
+    path('logout/', views.logout_view, name='logout'),
+
+    # Define la vista 'user_panel'.
 ]
